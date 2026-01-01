@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviesrecommendation.VibeFinderController" styleClass="vibe-finder-root">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="✨ VibeFinder" styleClass="vibe-title"/>
+
+    <TabPane styleClass="vibe-tab-pane" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Mood">
+                <VBox alignment="CENTER" spacing="15" styleClass="vibe-tab-content">
+                    <Label text="How are you feeling right now?" styleClass="vibe-subtitle"/>
+                    <Button text="Happy" userData="happy" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Sad" userData="sad" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Romantic" userData="romantic" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Angry" userData="angry" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Tired" userData="tired" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Motivated" userData="motivated" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                </VBox>
+            </Tab>
+            <Tab text="Time Length">
+                <VBox alignment="CENTER" spacing="15" styleClass="vibe-tab-content">
+                    <Label text="How much time do you have?" styleClass="vibe-subtitle"/>
+                    <Button text="30-60 min" userData="30-60" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="1-2 hours" userData="60-120" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="2+ hours" userData="120+" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                </VBox>
+            </Tab>
+            <Tab text="Ending Type">
+                <VBox alignment="CENTER" spacing="15" styleClass="vibe-tab-content">
+                    <Label text="What kind of ending do you prefer?" styleClass="vibe-subtitle"/>
+                    <Button text="Happy Ending" userData="happy_ending" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Sad Ending" userData="sad_ending" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Twist Ending" userData="twist_ending" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                    <Button text="Open Ending" userData="open_ending" onAction="#onAnswerSelected" styleClass="vibe-button" maxWidth="Infinity"/>
+                </VBox>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+    <Button text="Cancel" onAction="#onBackClicked" styleClass="vibe-cancel-button"/>
+</VBox>

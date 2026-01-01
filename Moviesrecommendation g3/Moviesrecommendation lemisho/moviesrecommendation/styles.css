@@ -1,0 +1,208 @@
+.root {
+    -fx-background-color: #141414;
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* --- Custom Title Bar (Explicitly Dark) --- */
+.title-bar {
+    -fx-background-color: #141414; /* Explicitly Black */
+    -fx-padding: 8px;
+    -fx-alignment: center-left;
+}
+
+.title-bar-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #a0a0a0; /* Soft Grey for text */
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 10px;
+}
+
+.window-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0a0a0; /* Soft Grey for buttons */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+.window-button:hover {
+    -fx-background-color: #333; /* Darker grey on hover */
+    -fx-text-fill: white;
+}
+
+.window-button-close:hover {
+    -fx-background-color: #e50914; /* Red only when hovering close */
+    -fx-text-fill: white;
+}
+/* --- End Custom Title Bar --- */
+
+.header {
+    -fx-background-color: rgba(20, 20, 20, 0.95); /* Almost opaque dark header */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 15, 0, 0, 5);
+}
+
+.app-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #e50914; /* Netflix Red Brand Color */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(229, 9, 20, 0.4), 10, 0, 0, 0); /* Subtle Glow */
+}
+
+/* Search Bar Styles */
+.search-container {
+    -fx-background-color: #333;
+    -fx-background-radius: 4px; /* Slightly squarer for pro look */
+    -fx-padding: 0 10px;
+    -fx-border-color: #555;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+.search-icon { -fx-text-fill: #aaa; -fx-font-size: 16px; -fx-padding: 0 5px 0 0; -fx-cursor: hand; }
+.search-input { -fx-background-color: transparent; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-padding: 8px 5px; }
+
+/* Search Suggestions Popup */
+.search-popup { -fx-background-color: #1f1f1f; -fx-background-radius: 4px; -fx-padding: 5px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 5); -fx-border-color: #333; }
+.search-popup .menu-item { -fx-padding: 8px 12px; }
+.search-popup .menu-item:hover { -fx-background-color: #333; }
+.search-popup .menu-item .label { -fx-text-fill: #e5e5e5; -fx-font-size: 14px; }
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #181818; /* Slightly lighter than root for separation */
+    -fx-min-width: 220px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 5, 0); /* Shadow to right */
+}
+
+/* --- Movies/Series Toggle (Minimalist Underline Style) --- */
+.media-toggle-bar {
+    -fx-padding: 20px 15px;
+    -fx-alignment: center;
+    -fx-spacing: 30px;
+}
+
+.media-toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #888;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 0;
+    -fx-cursor: hand;
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 3px;
+}
+
+.media-toggle-button:selected {
+    -fx-text-fill: white;
+    -fx-border-color: transparent transparent #e50914 transparent;
+    -fx-effect: dropshadow(gaussian, rgba(229, 9, 20, 0.4), 5, 0, 0, 2); /* Glow effect */
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+}
+.sidebar-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-border-color: transparent transparent transparent #e50914; /* Left red accent on hover */
+    -fx-border-width: 0 0 0 3px;
+}
+
+/* Accordion Styles */
+.accordion-transparent { -fx-background-color: transparent; }
+.titled-pane-transparent > .title { -fx-background-color: transparent; -fx-border-color: transparent; }
+.titled-pane-transparent > .title > .arrow-button .arrow { -fx-background-color: #888; }
+.titled-pane-transparent > .title > .text { -fx-fill: #b3b3b3; -fx-font-size: 15px; -fx-font-weight: bold; }
+.titled-pane-transparent:hover > .title { -fx-background-color: rgba(255, 255, 255, 0.05); }
+.titled-pane-transparent > .content { -fx-background-color: black; -fx-padding: 5px 0; } /* Black background */
+.sidebar-scroll { -fx-background-color: black; }
+.sidebar-scroll > .viewport { -fx-background-color: black; }
+
+/* Vibe Finder Button */
+.vibe-finder-button {
+    -fx-background-color: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 20px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 2);
+}
+.vibe-finder-button:hover { -fx-scale-x: 1.05; -fx-scale-y: 1.05; -fx-effect: dropshadow(gaussian, rgba(253, 29, 29, 0.6), 12, 0, 0, 0); }
+
+.welcome-text { -fx-font-size: 32px; -fx-text-fill: white; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0); }
+.welcome-subtext { -fx-font-size: 18px; -fx-text-fill: #e0e0e0; -fx-effect: dropshadow(gaussian, black, 5, 0, 0, 0); }
+
+/* VibeFinder Tabs (Pill Style) */
+.vibe-tab-pane { -fx-background-color: transparent; }
+.vibe-tab-pane .tab-header-area { -fx-padding: 10 0 20 0; }
+.vibe-tab-pane .tab-header-background { -fx-background-color: rgba(0,0,0,0.5); -fx-background-radius: 30px; }
+.vibe-tab-pane .tab { -fx-background-color: transparent; -fx-padding: 8px 25px; -fx-background-radius: 30px; }
+.vibe-tab-pane .tab:selected { -fx-background-color: #e50914; }
+.vibe-tab-pane .tab .tab-label { -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; }
+.vibe-tab-pane .tab-content-area { -fx-background-color: transparent; -fx-padding: 20px 0 0 0; }
+
+.vibe-button { -fx-background-color: rgba(40, 40, 40, 0.9); -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 20px; -fx-background-radius: 10px; -fx-cursor: hand; -fx-alignment: center; -fx-border-color: #444; -fx-border-radius: 10px; }
+.vibe-button:hover { -fx-background-color: #333; -fx-border-color: #e50914; -fx-scale-x: 1.02; -fx-scale-y: 1.02; }
+.vibe-cancel-button { -fx-background-color: transparent; -fx-text-fill: #aaa; -fx-font-size: 16px; -fx-cursor: hand; -fx-border-color: #aaa; -fx-border-radius: 20px; -fx-padding: 8px 30px; }
+.vibe-cancel-button:hover { -fx-text-fill: white; -fx-border-color: white; -fx-background-color: rgba(255, 255, 255, 0.1); }
+
+/* Movie Card Styles */
+.movie-card {
+    -fx-background-color: #1f1f1f;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0, 0, 4);
+    -fx-padding: 0; /* Removed padding for cleaner look */
+}
+.movie-card:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-background-color: #252525;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 15, 0, 0, 8);
+}
+.poster-image { -fx-background-radius: 6px 6px 0 0; } /* Rounded top corners only */
+.movie-title { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10px 10px 0 10px; }
+.movie-meta { -fx-font-size: 11px; -fx-text-fill: #888; -fx-font-weight: bold; -fx-padding: 0 10px; }
+.movie-overview { -fx-font-size: 12px; -fx-text-fill: #ccc; -fx-padding: 5px 10px; }
+.button-box { -fx-alignment: center; -fx-padding: 10px; -fx-spacing: 10px; }
+
+.action-button {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 8px 15px; /* Increased padding */
+    -fx-min-width: 90px; /* Added minimum width */
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.action-button:hover { -fx-background-color: #e50914; }
+
+/* --- Video Player Overlay Styles --- */
+.player-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.9);
+    -fx-alignment: center;
+}
+
+.close-button {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 50;
+    -fx-cursor: hand;
+    -fx-translate-x: -20;
+    -fx-translate-y: 20;
+}
+
+.close-button:hover {
+    -fx-background-color: #e50914;
+}
