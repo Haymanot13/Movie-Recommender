@@ -1,0 +1,8 @@
+com\example\moviesrecommendation\HelloController.class
+com\example\moviesrecommendation\MovieApi.class
+com\example\moviesrecommendation\HelloApplication.class
+com\example\moviesrecommendation\Movie.class
+com\example\moviesrecommendation\MovieService.class
+com\example\moviesrecommendation\Launcher.class
+com\example\moviesrecommendation\MovieService$1.class
+com\example\moviesrecommendation\MovieApiServer.class
