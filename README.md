@@ -9,7 +9,8 @@ The application allows users to discover movies. It appears to include features 
 ## Collaborators
 
 This project is a collaboration by:
-*   ewmw1221.haymanot13
+*   ewmw1221
+*   haymanot13
 *   bilalx570
 *   haftam8567
 *   kanu5858
